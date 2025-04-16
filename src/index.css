@@ -1,0 +1,123 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 20% 98%;
+    --foreground: 260 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 260 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 10% 15%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 20% 96%;
+    --secondary-foreground: 260 10% 15%;
+
+    --muted: 260 20% 96%;
+    --muted-foreground: 260 10% 45%;
+
+    --accent: 262 83% 94%;
+    --accent-foreground: 262 83% 38%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 260 20% 88%;
+    --input: 260 20% 88%;
+    --ring: 262 83% 58%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  .alert-category-badge {
+    @apply rounded-full px-3 py-1 text-xs font-medium text-white;
+  }
+
+  .map-container {
+    @apply rounded-xl shadow-md overflow-hidden;
+    height: 600px;
+  }
+  
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary via-primary/90 to-primary/70 bg-clip-text text-transparent;
+  }
+}
+
+/* Alert category colors */
+.bg-alert-fire {
+  @apply bg-red-500;
+}
+
+.bg-alert-crime {
+  @apply bg-purple-600;
+}
+
+.bg-alert-accident {
+  @apply bg-amber-500;
+}
+
+.bg-alert-weather {
+  @apply bg-blue-500;
+}
+
+.bg-alert-other {
+  @apply bg-gray-500;
+}
+
+/* Leaflet styles */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet-popup-content-wrapper {
+  @apply rounded-lg shadow-lg;
+}
+
+.leaflet-popup-content {
+  @apply p-1;
+}
+
+/* Custom marker styling */
+.custom-marker-icon {
+  background: transparent;
+  border: none;
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.hover-scale {
+  @apply transition-transform duration-200 hover:scale-105;
+}
