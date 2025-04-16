@@ -1,22 +1,18 @@
-
-// Import the functions you need from the SDKs you need
+// firebase.ts or firebaseConfig.ts
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAxAAH5RdxFu27E8CsOYyp9cC8pMfIGbOY",
-  authDomain: "citizenalert-497d9.firebaseapp.com",
-  databaseURL: "https://citizenalert-497d9-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "citizenalert-497d9",
-  storageBucket: "citizenalert-497d9.firebasestorage.app",
-  messagingSenderId: "806466831128",
-  appId: "1:806466831128:web:e7c1c73d36aeaab798146d"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const storage = getStorage(app);
