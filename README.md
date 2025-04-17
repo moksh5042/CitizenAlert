@@ -167,4 +167,4 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ---
 
-Feel free to contribute and make CitizenAlert even better! 🚀
+Feel free to contribute and make CitizenAlert even better!
