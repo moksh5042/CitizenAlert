@@ -1,6 +1,6 @@
  # CitizenAlert
 
-CitizenAlert is a web application designed to help communities stay informed about local incidents and emergencies. Users can create, view, and filter alerts based on categories such as fire, crime, accidents, weather, and more. The app also includes features like a map view, chatbot assistance, and user authentication.
+CitizenAlert is a web application designed to help communities stay informed about local incidents and emergencies. Users can create, view, and filter alerts based on categories such as fire, crime, accidents, weather, and more. The web app also includes features like a map view, chatbot assistance, and user authentication.
 
 ## Features
 
